@@ -1,0 +1,57 @@
+body{
+    color: #fff;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 700px){
+
+#content{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: repeat(100px, auto);
+    margin: 0  auto;
+    grid-gap: 10px;
+    grid-template-areas:
+
+    "header header header header" 
+    "aside aside main main"
+    "nav nav main main"               /*laptop or PC layout.*/
+    "section section section section"
+    "section section section section"
+    "footer footer footer footer ";
+
+}
+}
+
+#content > *{
+    background: #3bbced;
+    padding: 80px;
+}
+
+header{
+
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+section{
+    grid-area: section;
+}
+
+aside{
+    grid-area: aside;
+}
+
+nav{
+    grid-area: nav;
+}
+
+footer{
+    grid-area: footer;
+}
+
